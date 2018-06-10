@@ -55,13 +55,3 @@ def response = messageExchange.response.responseContent
 def slurper = new JsonSlurper()
 def json = slurper.parseText response 
 assert json.trends.'2012-08-29 08:20' != null
-
-
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/sankeths/soapui_os.git
-git push -f origin master
-
-newfile
-git commit -a -m "all checkin" 

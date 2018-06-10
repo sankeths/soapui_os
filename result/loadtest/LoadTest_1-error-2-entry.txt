@@ -1,0 +1,47 @@
+Sun Jun 10 23:44:16 IST 2018:Request for State:TestStep [Request for State] result status is FAILED; [[Verify if the Statename is correct.] Assertion failed for path [$.results[0].address_components[1].long_name] : PathNotFoundException:Array index [Ljava.lang.String;@56326f4e not found in path, [Verify the Country name] Missing token [Australia] in Response, [Script Assertion] Cannot get property 'address_components' on null object]:5
+----------------------------------------------------
+Status: FAILED
+Time Taken: 80
+Size: 271
+Timestamp: Sun Jun 10 23:44:16 IST 2018
+TestStep: Request for State
+
+----------------- Messages ------------------------------
+[Verify if the Statename is correct.] Assertion failed for path [$.results[0].address_components[1].long_name] : PathNotFoundException:Array index [Ljava.lang.String;@56326f4e not found in path
+[Verify the Country name] Missing token [Australia] in Response
+[Script Assertion] Cannot get property 'address_components' on null object
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://maps.googleapis.com
+Method: GET
+StatusCode: 200
+URL: http://maps.googleapis.com/maps/api/geocode/json?address=Sydney
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.1.1 (java 1.5)]
+Host: [maps.googleapis.com]
+Accept-Encoding: [gzip,deflate]
+
+---------------- Response --------------------------
+Server: [mafe]
+Access-Control-Allow-Origin: [*]
+Pragma: [no-cache]
+Date: [Sun, 10 Jun 2018 18:14:16 GMT]
+X-Frame-Options: [SAMEORIGIN]
+Cache-Control: [no-cache, must-revalidate]
+Content-Encoding: [gzip]
+Vary: [Accept-Language]
+Expires: [Fri, 01 Jan 1990 00:00:00 GMT]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [224]
+X-XSS-Protection: [1; mode=block]
+Content-Type: [application/json; charset=UTF-8]
+
+{
+   "error_message" : "You have exceeded your daily request quota for this API. We recommend registering for a key at the Google Developers Console: https://console.developers.google.com/apis/credentials?project=_",
+   "results" : [],
+   "status" : "OVER_QUERY_LIMIT"
+}
+
