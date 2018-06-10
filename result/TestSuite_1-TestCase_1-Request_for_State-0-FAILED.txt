@@ -1,0 +1,130 @@
+Status: FAILED
+Time Taken: 894
+Size: 2330
+Timestamp: Sun Jun 10 11:13:43 IST 2018
+TestStep: Request for State
+
+----------------- Messages ------------------------------
+[Verify if the Statename is correct.] Comparison failed for path [$.results[0].address_components[1].long_name], expecting [No Name Country], actual was [Pleasant Valley Drive]
+[Verify the Country name] Missing token [Australia] in Response
+[Script Assertion] assert json.results[0].address_components[1].long_name == context.expand('${#TestCase#State}')
+       |    |      |   |                 |   |         |  |       |
+       |    |      |   |                 |   |         |  |       No Name Country
+       |    |      |   |                 |   |         |  [httpClient:com.eviware.soapui.impl.wsdl.support.http.HttpClientSupport$SoapUIHttpClient@143f711b, ThreadIndex:0, wsdlRequest:com.eviware.soapui.impl.wsdl.teststeps.RestTestRequest@44b57dd, requestTransport:com.eviware.soapui.impl.wsdl.submit.transports.http.HttpClientRequestTransport@19b5ca6b, requestUri:http://maps.googleapis.com/maps/api/geocode/json, httpMethod:com.eviware.soapui.impl.wsdl.submit.transports.http.support.methods.ExtendedGetMethod@1dedc2e5, com.eviware.soapui.impl.wsdl.support.assertions.AssertedXPathsContainer:com.eviware.soapui.impl.wsdl.teststeps.RestRequestStepResult@373b06c4, postMethod:com.eviware.soapui.impl.wsdl.submit.transports.http.support.methods.ExtendedGetMethod@1dedc2e5, RunCount:0, #HTTP_STATE:null, httpResponseProperties:[address:no name city, type:json], httpResponse:com.eviware.soapui.impl.wsdl.submit.transports.http.SinglePartHttpResponse@3676b235, requestContent:]
+       |    |      |   |                 |   |         false
+       |    |      |   |                 |   Pleasant Valley Drive
+       |    |      |   |                 [long_name:Pleasant Valley Drive, short_name:Pleasant Valley Dr, types:[route]]
+       |    |      |   [[long_name:20899, short_name:20899, types:[street_number]], [long_name:Pleasant Valley Drive, short_name:Pleasant Valley Dr, types:[route]], [long_name:Sturgis, short_name:Sturgis, types:[locality, political]], [long_name:Southwest Meade, short_name:Southwest Meade, types:[administrative_area_level_3, political]], [long_name:Meade County, short_name:Meade County, types:[administrative_area_level_2, political]], [long_name:South Dakota, short_name:SD, types:[administrative_area_level_1, political]], [long_name:United States, short_name:US, types:[country, political]], [long_name:57785, short_name:57785, types:[postal_code]], [long_name:6404, short_name:6404, types:[postal_code_suffix]]]
+       |    |      [address_components:[[long_name:20899, short_name:20899, types:[street_number]], [long_name:Pleasant Valley Drive, short_name:Pleasant Valley Dr, types:[route]], [long_name:Sturgis, short_name:Sturgis, types:[locality, political]], [long_name:Southwest Meade, short_name:Southwest Meade, types:[administrative_area_level_3, political]], [long_name:Meade County, short_name:Meade County, types:[administrative_area_level_2, political]], [long_name:South Dakota, short_name:SD, types:[administrative_area_level_1, political]], [long_name:United States, short_name:US, types:[country, political]], [long_name:57785, short_name:57785, types:[postal_code]], [long_name:6404, short_name:6404, types:[postal_code_suffix]]], formatted_address:20899 Pleasant Valley Dr, Sturgis, SD 57785, USA, geometry:[location:[lat:44.364114, lng:-103.46828], location_type:ROOFTOP, viewport:[northeast:[lat:44.3654629802915, lng:-103.4669310197085], southwest:[lat:44.3627650197085, lng:-103.4696289802915]]], place_id:ChIJPeB3DY5aLVMRcwR9Ykmbcwk, types:[establishment, point_of_interest]]
+       |    [[address_components:[[long_name:20899, short_name:20899, types:[street_number]], [long_name:Pleasant Valley Drive, short_name:Pleasant Valley Dr, types:[route]], [long_name:Sturgis, short_name:Sturgis, types:[locality, political]], [long_name:Southwest Meade, short_name:Southwest Meade, types:[administrative_area_level_3, political]], [long_name:Meade County, short_name:Meade County, types:[administrative_area_level_2, political]], [long_name:South Dakota, short_name:SD, types:[administrative_area_level_1, political]], [long_name:United States, short_name:US, types:[country, political]], [long_name:57785, short_name:57785, types:[postal_code]], [long_name:6404, short_name:6404, types:[postal_code_suffix]]], formatted_address:20899 Pleasant Valley Dr, Sturgis, SD 57785, USA, geometry:[location:[lat:44.364114, lng:-103.46828], location_type:ROOFTOP, viewport:[northeast:[lat:44.3654629802915, lng:-103.4669310197085], southwest:[lat:44.3627650197085, lng:-103.4696289802915]]], place_id:ChIJPeB3DY5aLVMRcwR9Ykmbcwk, types:[establishment, point_of_interest]]]
+       [results:[[address_components:[[long_name:20899, short_name:20899, types:[street_number]], [long_name:Pleasant Valley Drive, short_name:Pleasant Valley Dr, types:[route]], [long_name:Sturgis, short_name:Sturgis, types:[locality, political]], [long_name:Southwest Meade, short_name:Southwest Meade, types:[administrative_area_level_3, political]], [long_name:Meade County, short_name:Meade County, types:[administrative_area_level_2, political]], [long_name:South Dakota, short_name:SD, types:[administrative_area_level_1, political]], [long_name:United States, short_name:US, types:[country, political]], [long_name:57785, short_name:57785, types:[postal_code]], [long_name:6404, short_name:6404, types:[postal_code_suffix]]], formatted_address:20899 Pleasant Valley Dr, Sturgis, SD 57785, USA, geometry:[location:[lat:44.364114, lng:-103.46828], location_type:ROOFTOP, viewport:[northeast:[lat:44.3654629802915, lng:-103.4669310197085], southwest:[lat:44.3627650197085, lng:-103.4696289802915]]], place_id:ChIJPeB3DY5aLVMRcwR9Ykmbcwk, types:[establishment, point_of_interest]]], status:OK]
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://maps.googleapis.com
+Method: GET
+StatusCode: 200
+URL: http://maps.googleapis.com/maps/api/geocode/json?address=no%20name%20city
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.1.1 (java 1.5)]
+Host: [maps.googleapis.com]
+Accept-Encoding: [gzip,deflate]
+
+GET http://maps.googleapis.com/maps/api/geocode/json?address=no%20name%20city HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: maps.googleapis.com
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+
+
+---------------- Response --------------------------
+X-Frame-Options: [SAMEORIGIN]
+Cache-Control: [public, max-age=86400]
+Server: [mafe]
+Access-Control-Allow-Origin: [*]
+Content-Encoding: [gzip]
+Vary: [Accept-Language]
+Expires: [Mon, 11 Jun 2018 05:43:45 GMT]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [576]
+X-XSS-Protection: [1; mode=block]
+Date: [Sun, 10 Jun 2018 05:43:45 GMT]
+Content-Type: [application/json; charset=UTF-8]
+
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "20899",
+               "short_name" : "20899",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Pleasant Valley Drive",
+               "short_name" : "Pleasant Valley Dr",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Sturgis",
+               "short_name" : "Sturgis",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Southwest Meade",
+               "short_name" : "Southwest Meade",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Meade County",
+               "short_name" : "Meade County",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "South Dakota",
+               "short_name" : "SD",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "57785",
+               "short_name" : "57785",
+               "types" : [ "postal_code" ]
+            },
+            {
+               "long_name" : "6404",
+               "short_name" : "6404",
+               "types" : [ "postal_code_suffix" ]
+            }
+         ],
+         "formatted_address" : "20899 Pleasant Valley Dr, Sturgis, SD 57785, USA",
+         "geometry" : {
+            "location" : {
+               "lat" : 44.364114,
+               "lng" : -103.46828
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 44.3654629802915,
+                  "lng" : -103.4669310197085
+               },
+               "southwest" : {
+                  "lat" : 44.3627650197085,
+                  "lng" : -103.4696289802915
+               }
+            }
+         },
+         "place_id" : "ChIJPeB3DY5aLVMRcwR9Ykmbcwk",
+         "types" : [ "establishment", "point_of_interest" ]
+      }
+   ],
+   "status" : "OK"
+}
+

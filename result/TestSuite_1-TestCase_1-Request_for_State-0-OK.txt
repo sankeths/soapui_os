@@ -1,0 +1,97 @@
+Status: OK
+Time Taken: 575
+Size: 1582
+Timestamp: Sun Jun 10 11:13:44 IST 2018
+TestStep: Request for State
+
+----------------- Messages ------------------------------
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://maps.googleapis.com
+Method: GET
+StatusCode: 200
+URL: http://maps.googleapis.com/maps/api/geocode/json?address=Sydney
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.1.1 (java 1.5)]
+Host: [maps.googleapis.com]
+Accept-Encoding: [gzip,deflate]
+
+GET http://maps.googleapis.com/maps/api/geocode/json?address=Sydney HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: maps.googleapis.com
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+
+
+---------------- Response --------------------------
+X-Frame-Options: [SAMEORIGIN]
+Cache-Control: [public, max-age=86400]
+Server: [mafe]
+Access-Control-Allow-Origin: [*]
+Content-Encoding: [gzip]
+Vary: [Accept-Language]
+Expires: [Mon, 11 Jun 2018 05:43:45 GMT]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [439]
+X-XSS-Protection: [1; mode=block]
+Date: [Sun, 10 Jun 2018 05:43:45 GMT]
+Content-Type: [application/json; charset=UTF-8]
+
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "Sydney",
+               "short_name" : "Sydney",
+               "types" : [ "colloquial_area", "locality", "political" ]
+            },
+            {
+               "long_name" : "New South Wales",
+               "short_name" : "NSW",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Australia",
+               "short_name" : "AU",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Sydney NSW, Australia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -33.5781409,
+                  "lng" : 151.3430209
+               },
+               "southwest" : {
+                  "lat" : -34.118347,
+                  "lng" : 150.5209286
+               }
+            },
+            "location" : {
+               "lat" : -33.8688197,
+               "lng" : 151.2092955
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.5781409,
+                  "lng" : 151.3430209
+               },
+               "southwest" : {
+                  "lat" : -34.118347,
+                  "lng" : 150.5209286
+               }
+            }
+         },
+         "place_id" : "ChIJP3Sa8ziYEmsRUKgyFmh9AQM",
+         "types" : [ "colloquial_area", "locality", "political" ]
+      }
+   ],
+   "status" : "OK"
+}
+

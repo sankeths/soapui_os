@@ -1,0 +1,57 @@
+
+http://maps.googleapis.com/maps/api/geocode/json?address=melbourne
+http://maps.googleapis.com/maps/api/geocode/json?latlng=-37.8136276,144.9630576
+
+http://jsonpath.com/
+http://www.java2s.com/Code/Jar/j/Downloadjxl26jar.htm
+
+${Properties#city}
+${#TestCase#state}
+context.expand('${#TestCase#State}')
+
+Groovy
+for(i=0 ; i<=10; i++)
+{
+	def project = testRunner.testCase.testSuite.project
+	def runner = project.testSuites['TestSuite 1'].testCases['TestCase 1'].run( null, true )
+	runner.waitUntilFinished()
+	log.info(i);
+}
+
+
+
+
+
+Download jxl jar from http://www.java2s.com/Code/Jar/j/Downloadjxl26jar.htm
+
+Place copy of this jar file in following folders of your soapui installation:
+
+SoapUI-5.2.1\lib
+SoapUI-5.2.1\Bin\ext
+
+import jxl.*
+
+Workbook workbook = Workbook.getWorkbook(new File("C:\\Soapui\\data.xls"))
+
+for(i=1 ; i<=4; i++){
+log.info(i);
+city = workbook.getSheet(0).getCell(0,i).getContents()
+log.info city
+state = workbook.getSheet(0).getCell(1,i).getContents()
+log.info state
+
+//testRunner.testCase.setPropertyValue("city", city)
+//testRunner.testCase.setPropertyValue("state", state)
+def project = testRunner.testCase.testSuite.project
+def prop1 = project.testSuites['TestSuite 1'].testCases['TestCase 1'].setPropertyValue("city", city)
+def prop2 = project.testSuites['TestSuite 1'].testCases['TestCase 1'].setPropertyValue("state", state)
+def runner = project.testSuites['TestSuite 1'].testCases['TestCase 1'].run( null, true )
+runner.waitUntilFinished()
+}
+
+
+import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response 
+assert json.trends.'2012-08-29 08:20' != null

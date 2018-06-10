@@ -1,0 +1,16 @@
+Status: OK
+Time Taken: 4
+Size: 0
+Timestamp: Sun Jun 10 11:13:45 IST 2018
+TestStep: Property Transfer
+
+----------------- Messages ------------------------------
+Performed transfer [lat]
+Performed transfer [lng]
+----------------------------------------------------
+lat transferred [[-33.8688197]] from [Request for State.Response] to [Properties.lat]
+------------ source path -------------
+$.results[0].geometry.location.lat
+lng transferred [[151.2092955]] from [Request for State.Response] to [Properties.lng]
+------------ source path -------------
+$.results[0].geometry.location.lng
