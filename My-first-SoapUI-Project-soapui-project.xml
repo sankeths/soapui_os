@@ -34,13 +34,13 @@
 
 Workbook workbook = Workbook.getWorkbook(new File("C:\\Soapui\\data.xls"))
 
-for(i=1 ; i&lt;=1; i++){
+for(i=1 ; i&lt;=4; i++){
 	log.info(i);
 	city = workbook.getSheet(0).getCell(0,i).getContents()
 	log.info city
 	state = workbook.getSheet(0).getCell(1,i).getContents()
 	log.info state
-	log.info "*******************"
+	log.info "********Start of Iteration ***********"
 
 
 	
